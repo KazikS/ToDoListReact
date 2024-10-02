@@ -1,0 +1,67 @@
+.input-task-block {
+    margin-top: 8%;
+    background-color: #ffb76b;
+    min-width: 40%;
+    min-height: 30%;
+    padding: 2%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    margin-bottom: 2%;
+    font-size: 20px;
+    input {
+        margin-top: 5%;
+        padding: 2%;
+        border-radius: 30px;
+        border: 2px solid grey;
+    }
+    input:focus {
+        outline: none;
+        border: 2px solid black;
+    }
+    button{
+        margin-top: 5%;
+        width: 50%;
+        height: 35px;
+        border: 1px solid grey;
+        border-radius: 17px;
+        align-self: flex-end;
+        background-color: rgb(84, 236, 84);
+        transition: all .5s;
+    }
+    button:hover{
+        width: 52%;
+        height: 45px;
+    }
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    min-width: 40%;
+    padding: 2%;
+}
+
+@media (max-width: 568px) {
+    .input-task-block {
+        font-size: 14px;
+    }
+}
+@media (min-width: 569px) and (max-width: 768px) {
+    .input-task-block {
+        font-size: 16px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .input-task-block {
+        font-size: 18px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .input-task-block {
+        font-size: 20px;
+    }
+}
