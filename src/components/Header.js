@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Header = () => {
-    return (
-        <header>
-            <span>TODO List</span>
-        </header>
-    );
+  return (
+    <header>
+      <h1>To-Do List</h1>
+    </header>
+  );
 };
 
 export default Header;

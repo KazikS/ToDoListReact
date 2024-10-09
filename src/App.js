@@ -1,12 +1,12 @@
-import "./styles/styles.css";
-import Header from "./components/Header";
-import ToDoComponent from "./components/ToDoComponent";
+import './styles/styles.css'
+import Header from './components/Header';
+import MainComponent from './components/MainComponent';
 
 function App() {
   return (
     <>
       <Header />
-      <ToDoComponent />
+      <MainComponent />
     </>
   );
 }

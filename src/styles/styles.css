@@ -1,171 +1,198 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 60px;
-  background-color: #ffa341;
-  font-size: 28px;
-  font-weight: 600;
-}
-header span {
-  display: inline-block;
-}
-
-@media (max-width: 568px) {
-  header {
-    font-size: 16px;
-  }
-}
-@media (min-width: 569px) and (max-width: 768px) {
-  header {
-    font-size: 20px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1024px) {
-  header {
-    font-size: 28px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1280px) {
-  header {
-    font-size: 30px;
-  }
-}
-.input-task-block {
-  margin-top: 8%;
-  background-color: #ffb76b;
-  min-width: 40%;
-  min-height: 30%;
-  padding: 2%;
-  align-self: center;
+  background-color: #ff6f43;
+  height: fit-content;
+  padding: 10px 0;
   display: flex;
-  flex-direction: column;
-  border-radius: 30px;
-  margin-bottom: 2%;
-  font-size: 20px;
-}
-.input-task-block input {
-  margin-top: 5%;
-  padding: 2%;
-  border-radius: 30px;
-  border: 2px solid grey;
-}
-.input-task-block input:focus {
-  outline: none;
-  border: 2px solid black;
-}
-.input-task-block button {
-  margin-top: 5%;
-  width: 50%;
-  height: 35px;
-  border: 1px solid grey;
-  border-radius: 17px;
-  align-self: flex-end;
-  background-color: rgb(84, 236, 84);
-  transition: all 0.5s;
-}
-.input-task-block button:hover {
-  width: 52%;
-  height: 45px;
-}
-
-.task-list {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
+  justify-content: center;
   align-items: center;
-  min-width: 40%;
-  padding: 2%;
 }
-
 @media (max-width: 568px) {
-  .input-task-block {
+  header h1 {
     font-size: 14px;
   }
 }
 @media (min-width: 569px) and (max-width: 768px) {
-  .input-task-block {
+  header h1 {
     font-size: 16px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  .input-task-block {
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
     font-size: 18px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1280px) {
-  .input-task-block {
+@media (min-width: 1025px) and (max-width: 1280px) {
+  header h1 {
     font-size: 20px;
   }
 }
-.task {
-  align-self: center;
-  padding: 2%;
+
+main {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 30px;
-  width: 100%;
-  margin-bottom: 4%;
 }
-.task .date {
-  margin-bottom: 2%;
-  margin-left: 2%;
-  background-color: wheat;
-  width: fit-content;
-  padding: 1%;
-  border-radius: 10px;
-}
-.task .task-content {
-  background-color: #fff;
-  padding: 2%;
-  border-radius: 20px;
+
+.input-wrapper {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.task .task-content input {
-  margin-right: 2%;
-}
-.task .task-content span {
-  margin-left: 2%;
-}
-.task button {
-  align-self: flex-end;
-  margin-top: 1.5%;
-  width: 25%;
-  min-width: fit-content;
-  height: 30px;
+  flex-direction: column;
+  margin-top: 8%;
+  align-self: center;
+  background-color: #ff6f43;
   border-radius: 10px;
-  border: 1px solid gray;
-  background-color: rgb(209, 209, 209);
-  transition: all 0.5s;
+  padding: 3%;
+  padding-bottom: 1%;
+  width: 40%;
 }
-.task button:hover {
-  width: 30%;
-  height: 40px;
-  background-color: rgb(201, 201, 201);
+.input-wrapper input {
+  width: 100%;
+  padding: 2%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+}
+.input-wrapper .add-btn {
+  margin-top: 3%;
+  align-self: flex-end;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 1px solid #007BFF;
+  font-size: 150%;
+  background-color: #EFEFEF;
+  transition: all 0.3s;
+}
+.input-wrapper .add-btn:hover {
+  background-color: #dedede;
+  width: 50px;
+  height: 50px;
+}
+.input-wrapper .add-btn:active {
+  background-color: #a2a2a2;
+  width: 45px;
+  height: 45px;
+}
+.input-wrapper textarea {
+  margin-top: 1%;
+  border-radius: 10px;
+  padding: 2%;
+  align-self: center;
+  width: 95%;
+  resize: vertical;
+}
+
+.tasks-block {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px;
+}
+.tasks-block .column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 10px;
+  text-align: center;
+}
+.tasks-block .column li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 0;
+}
+.tasks-block .column:not(:last-child) {
+  position: relative;
+}
+.tasks-block .column:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  right: 0;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  width: 70%;
+  align-self: center;
+  text-align: start;
+  padding: 2%;
+}
+.task .deadline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.task--low-priority {
+  background-color: snow;
+}
+
+.task--medium-priority {
+  background-color: #ff6f43;
+}
+
+.task--high-priority {
+  background-color: #FF3B30;
+}
+
+.react-datepicker__input-container input {
+  border-radius: 7px;
+  padding: 2%;
+  padding-left: 15%;
+  width: 80%;
+}
+
+.choose-date {
+  position: relative;
+}
+.choose-date img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 7%;
+  left: 1%;
+  z-index: 2;
+}
+
+.date-and-priority {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+.date-and-priority select {
+  border-radius: 7px;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body {
-  font-family: "Montserrat Alternates", sans-serif;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

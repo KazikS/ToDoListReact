@@ -1,0 +1,144 @@
+main {
+    width: 100%;
+    @include column-flex;
+}
+.input-wrapper {
+    @include column-flex;
+    input {
+        width: 100%;
+        padding: 2%;
+        border-radius: 5px;
+        border: 1px solid gray;
+        box-sizing: border-box;
+    }
+    margin-top: 8%;
+    align-self: center;
+    background-color: $orange-color;
+    border-radius: 10px;
+    padding: 3%;
+    padding-bottom: 1%;
+    width: 40%;
+    .add-btn {
+        margin-top: 3%;
+        align-self: flex-end;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: 1px solid $active-task;
+        font-size: 150%;
+        background-color: $main-background-color;
+        transition: all 0.3s;
+    }
+    .add-btn:hover {
+        background-color: #dedede;
+        width: 50px;
+        height: 50px;
+    }
+    .add-btn:active {
+        background-color: #a2a2a2;
+        width: 45px;
+        height: 45px;
+    }
+    textarea {
+        margin-top: 1%;
+        border-radius: 10px;
+        padding: 2%;
+        align-self: center;
+        width: 95%;
+        resize: vertical;
+    }
+}
+
+.tasks-block {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0 10px;
+        text-align: center;
+        li {
+            list-style: none;
+            @include center-flex;
+            margin: 1% 0;
+        }
+        &:not(:last-child) {
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 10%;
+                bottom: 10%;
+                right: 0;
+                width: 1px;
+                background-color: #ccc;
+            }
+        }
+    }
+}
+
+.task {
+    @include column-flex;
+    background-color: $task-card-color;
+    border-radius: 10px;
+    width: 70%;
+    align-self: center;
+    text-align: start;
+    padding: 2%;
+    .deadline{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2%;
+    }
+}
+
+.task--low-priority{
+    background-color: snow;
+}
+.task--medium-priority{
+    background-color: $orange-color;
+}
+.task--high-priority{
+    background-color: $priority-task;
+}
+
+.react-datepicker-wrapper {
+
+
+}
+.react-datepicker__input-container {
+    input {
+        border-radius: 7px;
+        padding: 2%;
+        padding-left: 15%;
+        width: 80%;
+    }
+}
+
+.choose-date{ 
+    position: relative;
+    img{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 7%;
+        left: 1%;
+        z-index: 2;
+    }
+}
+
+.date-and-priority{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    select{
+        border-radius: 7px;
+    }
+}

@@ -1,24 +1,31 @@
-import React from "react";
-
+import React, { useState } from "react";
 const Task = (props) => {
-  return (
-    <div
-      className="task"
-      style={{ backgroundColor: `${props.completed ? "#62e445" : "#ff976b"}` }}
-    >
-      <div className="task-content">
-        <span>{props.task}</span>
-        <input
-          type="checkbox"
-          checked={props.completed}
-          onChange={props.onToggle}
-        />
-      </div>
+  const getPriorityClass  = () => {
+    switch (props.priority) {
+      case "0":
+        return "task--low-priority";
+      case "1":
+        return "task--medium-priority";
+      case "2":
+        return "task--high-priority";
+    }
+  };
 
-      <button className="delete-task" onClick={props.onDelete}>
-        Удалить
-      </button>
-      <span className="date">{props.date}</span>
+  const formattedDate = new Date(props.date).toLocaleDateString('ru-RU', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  });
+
+  return (
+    <div className={`task ${getPriorityClass()}`}>
+      <h3>{props.title}</h3>
+      <hr style={{ width: "95%", margin: "2% auto" }} />
+      <span className="task-desc">{props.description}</span>
+      <div className="deadline">
+        <span>Срок</span>
+        <span>{formattedDate}</span>
+      </div>
     </div>
   );
 };
